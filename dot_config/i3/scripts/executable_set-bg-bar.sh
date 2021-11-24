@@ -11,6 +11,8 @@ source ~/.config/polybar/material/scripts/pywal.sh ~/.cache/betterlockscreen/cur
 
 source ~/.config/polybar/launch.sh --material
 
+# load from resources
+xrdb ~/.cache/wal/colors.Xresources
 
-
+i3-msg reload
 
