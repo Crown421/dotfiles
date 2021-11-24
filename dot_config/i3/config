@@ -267,6 +267,7 @@ for_window [class=kitty] resize shrink width 15 ppt
 
 for_window [class=Spotify] move to workspace $ws3
 assign [class=Signal] $ws3
+for_window [class=Insync] floating enable resize set 900 650
 
 
 #################################################################################
