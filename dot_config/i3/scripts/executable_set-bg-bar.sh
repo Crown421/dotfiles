@@ -14,5 +14,8 @@ source ~/.config/polybar/launch.sh --material
 # load from resources
 xrdb -merge ~/.cache/wal/colors.Xresources
 
-i3-msg reload
+i3-msg -q reload
 
+# dunst
+killall -q dunst
+dunst > /dev/null 2>&1 &
