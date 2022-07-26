@@ -71,7 +71,7 @@ bindsym $super+f exec dolphin
 bindsym $super+q kill
 
 # start dmenu (a program launcher)
-bindsym $super+d exec --no-startup-id dmenu_run
+# bindsym $super+d exec --no-startup-id dmenu_run
 # bindsym $super+space exec rofi -show run
 # bindsym $super+space exec ~/.config/rofi/bin/launcher_text
 bindsym $super+space exec ~/.config/polybar/material/scripts/launcher.sh
@@ -286,5 +286,5 @@ for_window [class=Insync] floating enable resize set 900 650
 
 exec --no-startup-id i3-msg 'workspace 1; exec kitty'
 exec --no-startup-id i3-msg 'workspace 2; exec sleep 3 && firefox; layout tabbed'
-exec --no-startup-id "sleep 5; signal-desktop"
-exec --no-startup-id "sleep 10; spotify"
+# exec --no-startup-id "sleep 5; signal-desktop"
+# exec --no-startup-id "sleep 10; spotify"
