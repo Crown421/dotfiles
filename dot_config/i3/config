@@ -281,11 +281,11 @@ set_from_resource $secondary color2 #C6C6C6
 set_from_resource $alternate color3 #bf616a
 
 # colour of border, background, text, indicator, and child_border
-client.focused              $alternate $background $foreground $primary $alternate
+client.focused              $primary $background $foreground $primary $alternate
 client.focused_inactive     $primary $background $foreground $background $primary
-client.unfocused            $primary $background $foreground $background $primary
-client.urgent               $primary $background $foreground $background $primary
-client.placeholder          $primary $background $foreground $background $primary
+client.unfocused            $background $background $foreground $background $primary
+client.urgent               $secondary $background $foreground $background $primary
+client.placeholder          $background $background $foreground $background $primary
 client.background           $primary
 
 default_border pixel 3
