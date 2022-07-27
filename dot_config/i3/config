@@ -36,6 +36,8 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 exec --no-startup-id insync start
 
+exec --no-startup-id autorandr --change
+
 
 #################################################################################
 ### Media Keys
@@ -159,8 +161,10 @@ bindsym $super+a focus parent
 #################################################################################
 ### Workspaces
 
-bindsym $super+Control+Right workspace next
-bindsym $super+Control+Left workspace prev
+bindsym $super+Control+Right workspace next_on_output
+bindsym $super+Control+Left workspace prev_on_output
+bindsym $super+Control+Up focus output DP-1
+bindsym $super+Control+Down focus output primary
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -174,6 +178,17 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
+
+workspace $ws1 output primary
+workspace $ws2 output primary
+workspace $ws3 output primary
+# workspace $ws4 output primary
+# workspace $ws5 output primary
+# workspace $ws6 output DP-1
+# workspace $ws7 output DP-1
+workspace $ws8 output DP-1
+workspace $ws9 output DP-1
+workspace $ws10 output DP-1
 
 # switch to workspace
 bindsym $super+1 workspace number $ws1
@@ -199,7 +214,12 @@ bindsym $super+Shift+8 move container to workspace number $ws8
 bindsym $super+Shift+9 move container to workspace number $ws9
 bindsym $super+Shift+0 move container to workspace number $ws10
 
-# reload the c-duonfiguration file
+# switch between outputs
+bindsym $alt+Shift+Up move workspace to output up
+bindsym $alt+Shift+Down move workspace to output down
+
+
+# reload the configuration file
 bindsym $super+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $super+Shift+r restart
@@ -274,7 +294,7 @@ default_border pixel 3
 ### Window Rules
 
 for_window [class=Pamac-manager] floating enable resize set 940 680
-for_window [class=kitty] resize shrink width 15 ppt
+# for_window [class=kitty] resize shrink width 15 ppt
 
 for_window [class=Spotify] move to workspace $ws3
 assign [class=Signal] $ws3
