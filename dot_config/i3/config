@@ -294,7 +294,7 @@ default_border pixel 3
 ### Window Rules
 
 for_window [class=Pamac-manager] floating enable resize set 940 680
-for_window [class=nm-connection-editor] floating enable resize set 940 680
+for_window [class=Nm-connection-editor] floating enable resize set 940 680
 # for_window [class=kitty] resize shrink width 15 ppt
 
 for_window [class=Spotify] move to workspace $ws3
