@@ -186,9 +186,9 @@ workspace $ws3 output primary
 # workspace $ws5 output primary
 # workspace $ws6 output DP-1
 # workspace $ws7 output DP-1
-workspace $ws8 output DP-1
-workspace $ws9 output DP-1
-workspace $ws10 output DP-1
+workspace $ws8 output DP-1 primary
+workspace $ws9 output DP-1 primary
+workspace $ws10 output DP-1 primary
 
 # switch to workspace
 bindsym $super+1 workspace number $ws1
@@ -294,6 +294,7 @@ default_border pixel 3
 ### Window Rules
 
 for_window [class=Pamac-manager] floating enable resize set 940 680
+for_window [class=nm-connection-editor] floating enable resize set 940 680
 # for_window [class=kitty] resize shrink width 15 ppt
 
 for_window [class=Spotify] move to workspace $ws3
